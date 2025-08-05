@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <title>portoforlio Nara Andra Tyaga</title>
@@ -19,7 +19,7 @@
     <br>Rayon:Cicurug-7  
     <br>rombel:P-3
     <br>Target jurusan:PPLG
-    </ul>
+    
     <hr>
 
     <h2>Saya sedang mempelajari bahasa pemrograman</h2>
