@@ -11,7 +11,7 @@
     <p>
         Nama:Nara Andra Tyaga
         <br> Tanggal lahir:26 mei 2010
-        <br>Tempat tinggal:griya benda asri 1 block f 1
+        <br>Tempat tinggal:griya benda asri 1 block f 1 11
         <br> Hoby: bermain game
         
 <h2>Sekolah</h2>
