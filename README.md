@@ -4,143 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Nara Andra Tyaga</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS Ditingkatkan */
+        /* Konfigurasi Dasar */
         :root {
-            --primary-color: #007bff; /* Biru terang */
-            --secondary-color: #343a40; /* Abu-abu gelap untuk teks */
-            --background-color: #f8f9fa; /* Latar belakang sangat terang */
-            --card-background: #ffffff; /* Latar belakang kartu putih */
+            --color-primary: #1e88e5; /* Biru tegas */
+            --color-text: #212121; /* Hitam pekat */
+            --color-background: #ffffff; /* Putih bersih */
+            --color-divider: #e0e0e0; /* Garis abu-abu tipis */
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
-            color: var(--secondary-color);
+            background-color: var(--color-background);
+            color: var(--color-text);
             line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
         .container {
-            max-width: 700px;
+            max-width: 800px;
             width: 90%;
             margin: 40px auto;
-            background: var(--card-background);
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 0; /* Hapus padding awal */
-            overflow: hidden; /* Penting untuk radius */
+            border: 1px solid var(--color-divider);
+            padding: 30px;
         }
 
-        /* Header (Bagian Utama/Hero) */
+        /* Judul Utama */
         header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 40px 30px;
-            text-align: center;
+            border-bottom: 3px solid var(--color-primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.2em;
+            color: var(--color-text);
             font-weight: 700;
         }
 
         header p {
-            margin-top: 5px;
-            font-weight: 300;
+            margin: 5px 0 0 0;
             font-size: 1.1em;
+            color: #616161;
         }
 
-        /* Konten Utama (Main Sections) */
-        .content-sections {
-            padding: 30px;
+        /* Tata Letak Konten */
+        main {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 25px;
+            gap: 20px;
         }
 
-        .section-title {
-            color: var(--primary-color);
-            font-size: 1.3em;
-            font-weight: 600;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #e9ecef;
+        /* Judul Bagian */
+        h2 {
+            font-size: 1.4em;
+            color: var(--color-primary);
+            margin-top: 0;
+            margin-bottom: 10px;
         }
 
-        /* Daftar dan Detail */
+        /* Daftar Detail */
         ul {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin-top: 0;
         }
 
         li {
-            margin-bottom: 10px;
-            font-weight: 400;
-            font-size: 0.95em;
-        }
-
-        strong {
-            font-weight: 600;
-            color: var(--secondary-color);
+            margin-bottom: 5px;
         }
 
         /* Keterampilan */
         .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            padding-top: 5px;
+            gap: 8px;
         }
 
         .skills-list li {
-            background-color: #e9ecef;
-            color: #333;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 0.85em;
+            background-color: #f1f1f1;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
             font-weight: 600;
         }
 
-        /* Tautan Media Sosial */
-        .social-links a {
-            color: var(--primary-color);
+        /* Tautan */
+        a {
+            color: var(--color-primary);
             text-decoration: none;
             margin-right: 15px;
             font-weight: 600;
-            transition: color 0.3s;
         }
 
-        .social-links a:hover {
-            color: #0056b3; /* Warna biru lebih gelap saat di-hover */
+        a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
         footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid var(--color-divider);
             text-align: center;
-            padding: 20px 30px;
-            background-color: var(--secondary-color);
-            color: #cccccc;
-            font-size: 0.8em;
+            font-size: 0.85em;
+            color: #757575;
         }
 
-        /* Responsif untuk tablet/desktop */
+        /* Tata Letak Dua Kolom untuk Desktop */
         @media (min-width: 600px) {
-            .content-sections {
-                grid-template-columns: 1fr 1fr; /* Dua kolom */
+            main {
+                grid-template-columns: 2fr 1fr;
+            }
+            
+            /* Bagian Detail Pendidikan, Keterampilan, dan Kontak di Kolom Kanan */
+            #pendidikan, #keterampilan, #kontak {
+                grid-column: 2 / 3;
             }
 
-            /* Bagian Ringkasan dan Tujuan mencakup dua kolom */
-            #ringkasan, #tujuan, #pendidikan {
-                grid-column: span 2;
+            /* Ringkasan dan Tujuan di Kolom Kiri */
+            #ringkasan, #tujuan {
+                grid-column: 1 / 2;
+            }
+
+            #informasi-dasar {
+                grid-column: 1 / 3;
             }
         }
     </style>
@@ -150,60 +143,59 @@
     <div class="container">
         <header>
             <h1>Nara Andra Tyaga</h1>
-            <p>Calon Pengembang Perangkat Lunak & Gim (PPLG)</p>
+            <p>Calon Pengembang Perangkat Lunak dan Gim</p>
         </header>
 
-        <div class="content-sections">
+        <main>
             
             <section id="ringkasan">
-                <h2 class="section-title">Ringkasan</h2>
-                <p>Siswa SMK Wikrama Bogor yang bersemangat dalam pengembangan web dan *game*. Aktif membangun dasar di **HTML** dan **CSS** untuk transisi ke pemrograman *backend* dan *full-stack*.</p>
+                <h2>Ringkasan</h2>
+                <p>Siswa SMK Wikrama Bogor, fokus pada jurusan PPLG. Aktif membangun dasar di HTML dan CSS. Berkomitmen untuk transisi ke pemrograman *backend* dan *full-stack*.</p>
             </section>
 
+            <section id="tujuan">
+                <h2>Tujuan</h2>
+                <p>Penguasaan *styling* dasar dengan CSS. Target terdekat adalah menyelesaikan satu proyek *landing page* minimalis dan memulai belajar JavaScript.</p>
+            </section>
+            
             <section id="pendidikan">
-                <h2 class="section-title">Pendidikan</h2>
+                <h2>Pendidikan</h2>
                 <ul>
                     <li>**Institusi:** SMK Wikrama Bogor</li>
-                    <li>**Target Jurusan:** PPLG (Pengembangan Perangkat Lunak dan Gim)</li>
-                    <li>**Detail Kelas:** Rayon Cicurug-7 / Rombel P-3</li>
+                    <li>**Jurusan:** PPLG</li>
+                    <li>**Detail:** Rayon Cicurug-7, Rombel P-3</li>
                 </ul>
             </section>
             
             <section id="keterampilan">
-                <h2 class="section-title">Keterampilan Teknis</h2>
+                <h2>Keterampilan</h2>
                 <ul class="skills-list">
-                    <li>HTML (Dasar)</li>
-                    <li>CSS (Dasar)</li>
-                    <li>Logika Pemrograman Dasar</li>
+                    <li>HTML Dasar</li>
+                    <li>CSS Dasar</li>
                 </ul>
             </section>
 
             <section id="informasi-dasar">
-                <h2 class="section-title">Detail Pribadi</h2>
+                <h2>Detail Pribadi</h2>
                 <ul>
                     <li>**Tanggal Lahir:** 26 Mei 2010</li>
                     <li>**Domisili:** Griya Benda Asri 1</li>
-                    <li>**Hobi/Minat:** Bermain game (meningkatkan analisis sistem)</li>
+                    <li>**Minat:** Bermain *game* (menganalisis sistem dan desain)</li>
                 </ul>
-            </section>
-
-            <section id="tujuan">
-                <h2 class="section-title">Tujuan Jangka Pendek</h2>
-                <p>Saat ini fokus pada penguasaan *styling* dasar dengan CSS. Target terdekat adalah menyelesaikan **satu proyek *landing page*** minimalis dan memulai belajar JavaScript.</p>
             </section>
             
             <section id="kontak">
-                <h2 class="section-title">Media Sosial</h2>
-                <div class="social-links">
+                <h2>Media Sosial</h2>
+                <div>
                     <a href="https://www.instagram.com/andra_tyg?igsh=MWlmOHR6MWl6aTVrOQ==" target="_blank">Instagram</a>
                     <a href="https://www.tiktok.com/@andra.tyg?_r=1&_d=el8935dedalh39&sec_uid=MS4wLjABAAAAp0T8UWF6zR_TK6VymW7KnsxloDE1371vdjP7b8aXNFNkG_s-C9mqxYz5s25Eu1CR&share_author_id=6836983545128305666&sharer_language=id&source=h5_t&u_code=dcmdj9hj8flfgj&timestamp=1754308092&user_id=6836983545128305666&sec_user_id=MS4wLjABAAAAp0T8UWF6zR_TK6VymW7KnsxloDE1371vdjP7b8aXNFNkG_s-C9mqxYz5s25Eu1CR&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7534153617323083541&share_link_id=eba78fdc-9186-411b-8833-d36cede9bb43&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1" target="_blank">TikTok</a>
                 </div>
             </section>
             
-        </div>
+        </main>
         
         <footer>
-            <p>Kode ini dibuat dengan HTML, CSS, dan semangat PPLG.</p>
+            <p>Dibangun dengan HTML dan CSS, 2025.</p>
         </footer>
     </div>
 
